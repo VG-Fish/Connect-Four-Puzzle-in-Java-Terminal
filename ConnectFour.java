@@ -16,7 +16,8 @@ public class ConnectFour {
             Arrays.fill(gameBoard[i], "| ");
         }
         Arrays.fill(gameBoard[6], "--");
-        for(int i=6;i>=0;i--){
+        gameBoard[6][6] = "---";
+        for(int i=5;i>=0;i--){
             gameBoard[i][6] = "| |";
         }
         play();
