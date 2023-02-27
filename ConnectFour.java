@@ -16,6 +16,9 @@ public class ConnectFour {
             Arrays.fill(gameBoard[i], "| ");
         }
         Arrays.fill(gameBoard[6], "--");
+        for(int i=6;i>=0;i--){
+            gameBoard[i][6] = "| |";
+        }
         play();
     }
 
@@ -141,6 +144,7 @@ public class ConnectFour {
         return false;
     }
     public static boolean major_diagonal_win(int[][] filled_gameBoard, String disk_color, int player_number){
+        //This traverses a matrix diagonally 
         int temp = filled_gameBoard.length+filled_gameBoard[0].length-2;
         for(int k=0;k<temp;k++) {
             int count = 0;
